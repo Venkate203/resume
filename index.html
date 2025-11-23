@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VENKATESAN V </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small helper for image gallery */
+    .screenshot { border-radius: 12px; border: 1px solid rgba(15,23,42,0.05); }
+
+    /* subtle card hover */
+    .card-hover { transition: transform 220ms ease, box-shadow 220ms ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(16,24,40,0.08); }
+
+    /* animated gradient for header */
+    .gradient-animated {
+      background: linear-gradient(90deg, #f3e8ff 0%, #fae8ff 50%, #fdf4ff 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* simple fade-up animation */
+    .reveal { opacity: 0; transform: translateY(10px); transition: opacity 500ms ease, transform 500ms ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+    /* small decorative blob */
+    .decor-blob { position: absolute; right: -80px; top: -40px; width: 300px; height: 300px; filter: blur(40px); opacity: 0.12; background: radial-gradient(circle at 30% 30%, #6366f1, transparent 30%), radial-gradient(circle at 70% 70%, #06b6d4, transparent 30%); border-radius: 50%; pointer-events: none; }
+
+    @media (max-width: 768px) {
+      .decor-blob { display:none; }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-purple-50 to-pink-100 text-gray-800 antialiased">
+  <header class="gradient-animated shadow-sm relative overflow-hidden">
+    <div class="decor-blob" aria-hidden="true"></div>
+    <div class="max-w-6xl mx-auto px-6 py-12 flex items-center justify-center flex-col text-center">
+      <h1 class="text-4xl font-extrabold reveal">VENKATESAN V</h1>
+      <p class="text-base text-gray-700 mt-3 max-w-3xl reveal">Clinical researcher and healthcare software developer building practical digital tools for safer prescribing, clinical trials, and automation in pharmacy practice. I design data-driven interfaces and deploy production-ready prototypes for clinical decision support.</p>
+      <div class="mt-6 flex items-center gap-3 reveal">
+        
+        <a href="#screenshots" class="px-4 py-2 rounded-full border border-purple-200 text-sm text-purple-600">See screenshots</a>
+      </div>
+      <div class="mt-6 grid grid-cols-3 gap-4 w-full max-w-md reveal">
+        <div class="text-center">
+          <div class="text-2xl font-semibold">5+</div>
+          <div class="text-xs text-gray-600">Modules built</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-semibold">Clinical</div>
+          <div class="text-xs text-gray-600">Focus area</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-semibold">n8n + JS</div>
+          <div class="text-xs text-gray-600">Automation & Code</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <section class="lg:col-span-2 bg-white/90 p-6 rounded-2xl shadow-lg border border-purple-100">
+      <h2 class="text-xl font-semibold">Featured Project — AntibioticGuideline Pro</h2>
+      <p class="mt-2 text-gray-700">Full clinical decision support platform: guideline engine, patient-specific dose calculator, drug–drug interaction checker, AI assistant and admin guideline editor.</p>
+
+      <!-- Hero + actions -->
+      <div class="mt-4 flex items-start gap-4">
+        <div class="flex-1">
+          <p class="text-sm text-gray-600">A single product that helps clinicians choose antibiotics, check interactions, and calculate renal-adjusted doses. Built with HTML, Tailwind CSS and vanilla JavaScript using a JSON-driven guideline database.</p>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <!-- Screenshot button removed -->
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div>
+              <h4 class="font-semibold">My role</h4>
+              <p>Solo developer: UI/UX, data model, guideline integration, interaction logic, and deployment.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold">Impact / Outcome</h4>
+              <ul class="list-disc list-inside mt-2">
+                <li>Demonstrates product-level clinical logic for antibiotic selection</li>
+                <li>Shows API integration and structured guideline authoring</li>
+                <li>Ready to be adopted or extended for clinical use</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-56">
+          <div class="bg-purple-50 p-4 rounded-lg">
+            <h5 class="text-sm font-semibold">Tech stack</h5>
+            <ul class="mt-2 text-sm text-gray-700 list-disc list-inside">
+              <li>HTML · Tailwind CSS · JavaScript</li>
+              <li>Anime.js · ECharts · Typed.js</li>
+              <li>JSON-based guideline engine</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case study details -->
+      <div class="mt-6 border-t pt-6 text-gray-800">
+        <h3 class="text-lg font-semibold">Problem</h3>
+        <p class="mt-2 text-sm text-gray-700">Clinicians need fast, evidence-based recommendations for antibiotic selection and dosing while accounting for renal function and drug interactions. Existing resources are scattered and not always clinician-friendly at point-of-care.</p>
+
+        <h3 class="text-lg font-semibold mt-4">Solution</h3>
+        <p class="mt-2 text-sm text-gray-700">I built AntibioticGuideline Pro — a JSON-driven platform that centralises guideline regimens, offers patient-specific dosing calculators, checks drug interactions (via API), and provides an admin UI to edit guidelines safely.</p>
+
+        <h3 class="text-lg font-semibold mt-4">Detailed architecture & data model</h3>
+        <p class="mt-2 text-sm text-gray-700">The platform is built as a modular frontend application backed by a JSON guideline store. Key components include:</p>
+        <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
+          <li><strong>Guideline Store (guidelines.json):</strong> Structured entries for conditions, first/second-line antibiotics, dosing ranges, paediatric rules, and renal adjustment rules.</li>
+          <li><strong>Search & Syndrome Matcher (main.js):</strong> Keyword-based matching with priority scoring to suggest likely conditions and relevant guideline nodes.</li>
+          <li><strong>Dose Calculator (calculator.html):</strong> Patient input form (weight, age, CrCl) with stepwise dosing algorithm and renal-modifier functions.</li>
+          <li><strong>Interaction Engine (drugInteractionClient.js):</strong> Client module queries an interaction API, normalises results, and generates a severity matrix with suggested alternatives.</li>
+          <li><strong>Admin Editor (admin.html):</strong> Simple JSON editor with validation and import/export to safely update guideline content.</li>
+        </ul>
+
+        <h3 class="text-lg font-semibold mt-4">User flow</h3>
+        <ol class="list-decimal list-inside text-sm mt-2 text-gray-700">
+          <li>Clinician searches for a syndrome or enters patient data</li>
+          <li>System suggests guideline options with first/second-line choices</li>
+          <li>Clinician opens dose calculator and adjusts for weight/renal function</li>
+          <li>Before finalising, the interaction checker scans for potential drug–drug risks</li>
+          <li>Admin users can edit guidelines and publish changes without code deployments</li>
+        </ol>
+
+        <h3 class="text-lg font-semibold mt-4">Security & deployment notes</h3>
+        <p class="mt-2 text-sm text-gray-700">The current prototype is frontend-only for demonstration. For production deployment I recommend server-side validation, secure API keys for the interaction service, and role-based access control for the admin editor.</p>
+
+        <h3 class="text-lg font-semibold mt-4">What I learned</h3>
+        <p class="mt-2 text-sm text-gray-700">How to structure clinical knowledge in JSON, design UI for clinicians, integrate third-party APIs, and deliver a deployable frontend product suitable for demonstrations to potential employers.</p>
+
+      </div>
+
+      <!-- Screenshots gallery -->
+      <div id="screenshots" class="mt-6">
+        <h3 class="text-lg font-semibold">Screenshots</h3>
+        <p class="text-sm text-gray-600 mt-1">(If images do not load, replace the paths below with the exact filenames you uploaded.)</p>
+
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <img src="images/Screenshot_2025-11-23_175903.png" alt="Dashboard hero screenshot" class="screenshot w-full object-cover" />
+          <img src="images/Screenshot_2025-11-23_180002.png" alt="Interaction checker screenshot" class="screenshot w-full object-cover" />
+          <img src="images/Screenshot_2025-11-23_175934.png" alt="Dose calculator screenshot" class="screenshot w-full object-cover" />
+          <img src="images/Screenshot_2025-11-23_180036.png" alt="AI assistant screenshot" class="screenshot w-full object-cover" />
+          <img src="images/Screenshot_2025-11-23_180106.png" alt="Admin panel screenshot" class="screenshot w-full object-cover" />
+          <img src="images/Screenshot_2025-11-23_183128.png" alt="n8n Geriatric Safety Checker Workflow" class="screenshot w-full object-cover" />
+        </div>
+          
+        </div>
+
+      <h3 class="text-lg font-semibold mt-8">All Project Modules</h3>
+      <ul class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1">
+        <li><strong>Dashboard:</strong> Main clinical overview and guideline access.</li>
+        <li><strong>Dose Calculator:</strong> Weight-based and renal-adjusted antibiotic dosing.</li>
+        <li><strong>Interaction Checker:</strong> Multi-drug interaction matrix with severity levels.</li>
+        <li><strong>AI Assistant:</strong> Chat-style assistant for clinical questions.</li>
+        <li><strong>Admin Panel:</strong> Guideline JSON editor and content management.</li>
+      </ul>
+    <h2 class="text-xl font-semibold mt-10">Project — Vitamin D3 Clinical Trial</h2>
+      <p class="mt-2 text-gray-700 text-sm">A quasi-experimental clinical study titled <em>“Can Vitamin D3 Correction Improve Autism Severity?”</em> conducted in children with Autism Spectrum Disorder and Vitamin D deficiency.</p>
+      <ul class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1">
+        <li><strong>Study Type:</strong> Quasi-experimental interventional study</li>
+        <li><strong>Participants:</strong> Children with ASD + Vitamin D deficiency</li>
+        <li><strong>Outcomes:</strong> CARS, ATEC, SRS, Sleep‑Questionnaire, Behavioral Scales</li>
+        <li><strong>Role:</strong> Study design, ethics documentation, data collection, scale scoring & statistical planning</li>
+      </ul>
+
+      
+
+    <h2 class="text-xl font-semibold mt-10">Project — n8n Automation Workflows</h2>
+      <p class="mt-2 text-gray-700 text-sm">A collection of automated clinical and research workflows built using <strong>n8n</strong> to reduce manual workload, improve accuracy, and boost efficiency in pharmacy practice, clinical research, and digital health operations.</p>
+      <ul class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1">
+        <li><strong>Medication Error Reporting Bot:</strong> Automated form → Google Sheet → Email alert workflow.</li>
+        <li><strong>Drug‑Interaction Auto Checker:</strong> Workflow that takes drug input and sends interaction results via Telegram.</li>
+        <li><strong>Clinical Trial Reminder System:</strong> Automatically schedules follow‑ups, sends reminders, and logs responses.</li>
+        <li><strong>Research Data Collector:</strong> Scrapes PubMed keywords and stores structured data into Google Sheets.</li>
+        <li><strong>Hospital Rounds Automation:</strong> Daily automated message delivery with required patient data fields.</li>
+        <li><strong>Geriatric Safety Checker Telegram Bot:</strong> A fully automated Telegram bot built in n8n that validates drug inputs, checks them against the <strong>Beers Criteria</strong>, and sends formatted safety alerts. The workflow includes:
+          <ul class="list-disc list-inside ml-6 mt-1 text-gray-700 text-sm">
+            <li><strong>Trigger Node:</strong> Receives medication names from Telegram.</li>
+            <li><strong>Validation Node:</strong> Ensures the drug input is not empty and matches supported entries.</li>
+            <li><strong>Beers Criteria Lookup:</strong> Matches the drug against JSON‑based risk rules.</li>
+            <li><strong>Risk Classification:</strong> Flags anticholinergic risk, fall risk, CNS risk, renal warning, and drug–disease interactions.</li>
+            <li><strong>Formatter Node:</strong> Builds a clean clinical‑style safety message.</li>
+            <li><strong>Telegram Send Node:</strong> Automatically sends the final safety alert back to the user.</li>
+          </ul><strong></strong> A fully automated Telegram bot built in n8n that validates drug inputs, checks them against the <strong>Beers Criteria</strong>, and sends formatted safety alerts. Includes input validation, conditional logic, JSON drug‑rule matching, and automated Telegram responses. (Workflow based on your uploaded n8n JSON file.)</li>
+      </ul>
+
+    
+
+      
+
+</section>
+
+    <aside class="bg-white/90 p-6 rounded-2xl shadow-lg border border-purple-100">
+      <h4 class="text-sm font-semibold">Certifications</h4>
+      <ul class="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
+        <li>GCP (Good Clinical Practice) — NIH</li>
+        <li>Beginner’s Guide to Clinical Research Essentials</li>
+        <li>Pharmacovigilance Certification / Drug Safety Training</li>
+        <li>Systematic Review & Meta-analysis Workshop</li>
+        <li>Drug Discovery & Development Workshop</li>
+        <li>International Research Presentation — Monash University Platform</li>
+        <li>AICON 2024 — Delegate / Participant</li>
+      </ul>
+
+      
+      <h4 class="text-sm font-semibold mt-6">Contact</h4>
+      <ul class="text-sm text-gray-700 mt-2 space-y-1">
+        <li>Kallakurichi, Tamil Nadu</li>
+        <li><a href="mailto:vvv2033020@gmail.com" class="text-purple-600">vvv2033020@gmail.com</a></li>
+        <li><a href="tel:+919360771388" class="text-purple-600">+91 93607 71388</a></li>
+      </ul>
+    </aside>
+
+    <!-- Right column: Quick facts, contact, CTA -->
+    
+
+  </main>
+
+  <footer class="max-w-6xl mx-auto p-6 text-center text-xs text-gray-500">
+    Built by Venkatesan V — Clinical Research • Digital Health • Automation
+  </footer>
+  <script>
+    // Intersection Observer to reveal elements with .reveal class
+    (function(){
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
+        });
+      }, {threshold: 0.12});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+      // simple shimmer on tech badges (small visual polish)
+      document.querySelectorAll('.bg-gray-50').forEach(el=>{
+        el.classList.add('card-hover');
+      });
+    })();
+  </script>
+</body>
+</html>
